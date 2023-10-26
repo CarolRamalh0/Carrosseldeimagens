@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: font1;
+    src: url(BlackForest.otf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(Delicious\ Curls.ttf);
+}
+
+body {
+    margin: 0;
+    /* zerar a margem de todo o doc */
+    padding: 0;
+    /* zerar o espaçamento de todo o doc */
+    height: 100vh;
+    width: 100vw;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(144, 68, 242, 1) 94%);
+
+}
+
+h1 {
+    font-family: font1;
+    font-size: 3.5em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.container {
+
+    height: 460px;
+    width: 800px;
+    overflow: hidden;
+    position: absolute;
+    /* torna possivel alterar a posicao do c o n t a i n e r */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* altera a posicao do eixo */
+    box-shadow: 10px 10px 20px;
+    border-radius: 8%;
+
+}
+
+.navegacao {
+    position: absolute;
+    /* posicao em relacao ao container */
+    bottom: 20px;
+    /* distancia a partir da base */
+    left: 50%;
+    /* distancia a aprtir da esquerda */
+    transform: translate(-50%);
+    /* alterar o eixo principal */
+    display: flex;
+    /* colocar o conteudo lado a lado */
+
+}
+
+.bar {
+    background-color: #8801f780;
+    /* plano de fundo do indicador */
+    width: 30px;
+    /* largura do indicador */
+    height: 5px;
+    /* altura do indicador */
+    margin: 6px;
+    /* espaco entre os indicadores */
+    transition: .3s;
+    /* trasicao no hover */
+    cursor: pointer;
+    /* ponteiro do mouse */
+
+}
+
+.bar:hover{
+    background-color: #ff58db80;
+}
+input {
+    display: none;
+    /* ocultar as input do tipo radio */
+
+}
+
+.imagens {
+    display: flex;
+    /* posiciona uma imagem ao lado da outra */
+    width: 600%;
+    /* define o tamanho da div imagens */
+    height: 100%;
+    /* define a altura da div imagens */
+
+}
+
+.imagem {
+    width: 16.6666666667%;
+    /* define a proporçao do tamanho de cada imagem em relaçao ao elemento pai */
+    transition: .5s;
+    /* efeito na transiçao das imagens */
+
+}
+
+.imagem img {
+    width: 100%;
+    /* ajusta o tamanho da imagem dentro do container  */
+    height: 100%;
+    /* ajusta o tamanho da iamgem dentro do container */
+}
+
+#imagem1:checked~.img1 {
+    margin-left: 0;
+}
+
+#imagem2:checked~.img1 {
+
+    margin-left: -16.6666666667%;
+}
+
+
+#imagem3:checked~.img1 {
+    margin-left: -33.33333333333%;
+}
+
+#imagem4:checked~.img1 {
+    margin-left: -50%;
+}
+
+#imagem5:checked~.img1 {
+    margin-left: -66.6666666667%;
+}
+
+#imagem6:checked~.img1 {
+    margin-left: -83.3333333333%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: font2;
+}
